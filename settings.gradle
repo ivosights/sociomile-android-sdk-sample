@@ -1,0 +1,28 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+
+        maven {
+            url 'https://storage.googleapis.com/download.flutter.io'
+        }
+
+        maven {
+            url "https://sociomile-sdk.s3.ap-southeast-1.amazonaws.com/sociomile-flutter-sdk/"
+        }
+
+        maven{
+            url "https://sociomile-sdk.s3.ap-southeast-1.amazonaws.com/sosiomile-android-sdk/"
+        }
+    }
+}
+rootProject.name = "sociomile_android_sdk_sample"
+include ':app'
