@@ -4,6 +4,7 @@ import android.Manifest
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
+import android.os.Build
 import android.os.Bundle
 import android.provider.Settings
 import android.util.Log
@@ -40,11 +41,11 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        setSupportActionBar(binding.toolbar)
+//        setSupportActionBar(binding.toolbar)
 
         val navController = findNavController(R.id.nav_host_fragment_content_main)
         appBarConfiguration = AppBarConfiguration(navController.graph)
-        setupActionBarWithNavController(navController, appBarConfiguration)
+//        setupActionBarWithNavController(navController, appBarConfiguration)
 
         requestPermissionLauncher =
             registerForActivityResult(ActivityResultContracts.RequestPermission()) { isGranted: Boolean ->
@@ -56,42 +57,57 @@ class MainActivity : AppCompatActivity() {
 
         askNotificationPermission()
 
-        binding.fab.setOnClickListener { view ->
-            FirebaseMessaging.getInstance().token.addOnCompleteListener(OnCompleteListener { task ->
-                if (!task.isSuccessful) {
-                    return@OnCompleteListener
-                }
-
-                // Get new FCM registration token
-                val token = task.result
-                fcmToken = token
-                Log.d("FCM_TOKEN", token)
-
-                val sociomileEngine = Sociomile.Builder()
-                    .colorSender(0xFF33E05E)
-                    .colorOwner(0xFF384191)
-                    .colorTheme(0xFF384191)
-                    .colorButtonSender(0xFF384191)
-                    .colorIconDefault(0xFF384191)
-                    .labelColorSender(0xFF389400)
-                    .labelColorOwner(0xFF389400)
-                    .labelColorTheme(0xFF389400)
-                    .fontFamily("Lato")
-                    .clientId("AAA")
-                    .clientKey("BBB")
-                    .userId("6281288682850")
-                    .userName("Zafran")
-                    .fcmNotificationToken(fcmToken)
-                    .build()
-
-                sociomileEngine.runSociomileEngine(this)
-
-                startActivity(
-                    SociomileActivity
-                        .withCachedEngineBuilder(Sociomile.FLUTTER_ENGINE_NAME, this)
-                )
-            })
-        }
+//        binding.fab.setOnClickListener { view ->
+//            FirebaseMessaging.getInstance().token.addOnCompleteListener(OnCompleteListener { task ->
+//                if (!task.isSuccessful) {
+//                    return@OnCompleteListener
+//                }
+//
+//                // Get new FCM registration token
+//                val token = task.result
+//                fcmToken = token
+//                Log.d("FCM_TOKEN", token)
+//
+//                val sociomileEngine = Sociomile.Instance()
+//
+//                sociomileEngine
+//                    .colorSender(0xFF33E05E)
+//                    .colorReceiver(0xFF384191)
+//                    .colorTheme(0xFF384191)
+//                    .colorButtonSender(0xFF384191)
+//                    .colorIconDefault(0xFF384191)
+//                    .labelColorSender(0xFF389400)
+//                    .labelColorReceiver(0xFF389400)
+//                    .labelColorTheme(0xFF389400)
+//                    .fontFamily("Lato")
+//                    .colorConnectivity(0xFF389400)
+//                    .lblColorConnectivity(0xFFFFFFFF)
+//                    .screenColor(0xFFDFDFDF)
+//                    .colorTextContainer(0xFF384191)
+//                    .colorBackgroundAppbar(0xFF384191)
+//                    .colorAppbarDefault(0xFFFFFFFF)
+//                    .lblColorHeaderMsg(0xFF33E05E)
+//                    .lblColorDateMsg(0xFF33E05E)
+//                    .build()
+//
+//                sociomileEngine
+//                    .build()
+//                    .initialize("BBB", "AAA", "6281288682850", "Zafran")
+//
+//                sociomileEngine.build().isDarkModeActivated(true)
+//
+//                sociomileEngine.build().firebaseToken(fcmToken)
+//
+//                sociomileEngine.build().setLogger(true)
+//
+//                sociomileEngine.build().runSociomileEngine(this)
+//
+//                startActivity(
+//                    SociomileActivity
+//                        .withCachedEngineBuilder(Sociomile.FLUTTER_ENGINE_NAME, this)
+//                )
+//            })
+//        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -117,33 +133,35 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun askNotificationPermission() {
-        when {
-            ContextCompat.checkSelfPermission(
-                this, Manifest.permission.POST_NOTIFICATIONS
-            ) == PackageManager.PERMISSION_GRANTED -> {
-                // You can use the API that requires the permission.
-                Log.e("MAIN ACTIVITY", "onCreate: PERMISSION GRANTED")
-            }
-            shouldShowRequestPermissionRationale(Manifest.permission.POST_NOTIFICATIONS) -> {
-                Snackbar.make(
-                    binding.root,
-                    "Notification blocked",
-                    Snackbar.ANIMATION_MODE_SLIDE
-                ).setAction("Settings") {
-                    // Responds to click on the action
-                    val intent = Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS)
-                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                    val uri: Uri = Uri.fromParts("package", packageName, null)
-                    intent.data = uri
-                    startActivity(intent)
-                }.show()
-                //  Toast.makeText(this, "NOT ALLOWED", Toast.LENGTH_SHORT).show()
-            }
-            else -> {
-                Log.e("MAIN ACTIVITY", "onCreate: ask for permissions")
-                requestPermissionLauncher.launch(
-                    Manifest.permission.POST_NOTIFICATIONS
-                )
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            when {
+                ContextCompat.checkSelfPermission(
+                    this, Manifest.permission.POST_NOTIFICATIONS
+                ) == PackageManager.PERMISSION_GRANTED -> {
+                    // You can use the API that requires the permission.
+                    Log.e("MAIN ACTIVITY", "onCreate: PERMISSION GRANTED")
+                }
+                shouldShowRequestPermissionRationale(Manifest.permission.POST_NOTIFICATIONS) -> {
+                    Snackbar.make(
+                        binding.root,
+                        "Notification blocked",
+                        Snackbar.ANIMATION_MODE_SLIDE
+                    ).setAction("Settings") {
+                        // Responds to click on the action
+                        val intent = Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS)
+                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                        val uri: Uri = Uri.fromParts("package", packageName, null)
+                        intent.data = uri
+                        startActivity(intent)
+                    }.show()
+                    //  Toast.makeText(this, "NOT ALLOWED", Toast.LENGTH_SHORT).show()
+                }
+                else -> {
+                    Log.e("MAIN ACTIVITY", "onCreate: ask for permissions")
+                    requestPermissionLauncher.launch(
+                        Manifest.permission.POST_NOTIFICATIONS
+                    )
+                }
             }
         }
     }

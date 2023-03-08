@@ -13,4 +13,28 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="homebutton">homeButton</string>
+    <string name="shufflebutton">shuffleButton</string>
+    <string name="notifbutton">notifButton</string>
+    <string name="profilebutton">profileButton</string>
+    <string name="map_background">Map Background</string>
+    <string name="image_user_profile">Image User Profile</string>
+    <string name="type_card">Personal Account</string>
+    <string name="name_account">Danish</string>
+    <string name="title_balance">Balance</string>
+    <string name="balanceValue">Rp 2.000.000</string>
+    <string name="titleTransfer">Transfer</string>
+    <string name="transferButton">Transfer Button</string>
+    <string name="withdraw_button">Withdraw Button</string>
+    <string name="withdraw">Withdraw</string>
+    <string name="topup">Topup</string>
+    <string name="top_up">Top Up</string>
+    <string name="withdrawButton">Withdraw Button</string>
+    <string name="more_button">More Button</string>
+    <string name="more">More</string>
+    <string name="transactions">Transactions</string>
+    <string name="all">All</string>
+    <string name="see_all"><u>See All</u></string>
+    <string name="current_transaction">Current Transaction</string>
+    <string name="_35_070_0003_3258_2022">35-070-0003-3258-2022</string>
 </resources>

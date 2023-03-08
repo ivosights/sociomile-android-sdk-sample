@@ -14,9 +14,9 @@ class PushNotifService : FirebaseMessagingService(){
         MainActivity.fcmToken = token
         super.onNewToken(token)
     }
-    //    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+
     override fun onMessageReceived(remoteMessage: RemoteMessage) {
-        if (remoteMessage.getNotification() != null) {
+        if (remoteMessage.notification != null) {
 
             val intent = SociomileActivity
                 .withCachedEngineBuilder(Sociomile.FLUTTER_ENGINE_NAME, this)
@@ -25,14 +25,7 @@ class PushNotifService : FirebaseMessagingService(){
                 .addParentStack(MainActivity::class.java)
                 .addNextIntent(intent)
 
-            showNotification(
-                context = this,
-                title = remoteMessage.notification?.title.toString(),
-                desc = remoteMessage.notification?.body.toString(),
-                iconNotification = R.mipmap.ic_launcher,
-                mapData = remoteMessage.data,
-                stackBuilder = stackBuilder
-            )
+            showNotification(this, remoteMessage.notification?.title, remoteMessage.notification?.body, R.mipmap.ic_launcher, remoteMessage.data, stackBuilder)
         }
     }
 }
