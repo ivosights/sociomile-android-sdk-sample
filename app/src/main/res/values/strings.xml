@@ -2,8 +2,8 @@
     <string name="app_name">Sociomile Sample</string>
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
+    <string name="first_fragment_label">Profile Fragment</string>
+    <string name="second_fragment_label">Help Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
@@ -37,4 +37,5 @@
     <string name="see_all"><u>See All</u></string>
     <string name="current_transaction">Current Transaction</string>
     <string name="_35_070_0003_3258_2022">35-070-0003-3258-2022</string>
+    <string name="title_activity_main">MainAct</string>
 </resources>

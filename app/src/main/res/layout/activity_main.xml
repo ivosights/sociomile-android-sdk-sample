@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,79 +7,25 @@
     android:background="#F4F4F4"
     tools:context=".MainActivity">
 
-    <include
-        android:id="@+id/include"
-        layout="@layout/content_main" />
-
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        app:layout_constraintBottom_toBottomOf="@id/include"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <com.google.android.material.bottomappbar.BottomAppBar
-            android:id="@+id/app_bar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:background="@color/white"
-            app:elevation="12dp"
-            app:fabCradleMargin="8dp"
-            app:fabCradleRoundedCornerRadius="50dp"
-            app:fabCradleVerticalOffset="6dp" />
-
-        <LinearLayout
+        <FrameLayout
+            android:id="@+id/container"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/white"
-            android:orientation="horizontal">
+            android:layout_above="@+id/bottomNav"
+            />
 
-            <ImageButton
-                android:id="@+id/homeButton"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.02"
-                android:backgroundTint="@color/white"
-                android:contentDescription="@string/homebutton"
-                android:scaleType="centerInside"
-                app:srcCompat="@drawable/ic_home"
-                app:tint="@color/dark_blue" />
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNav"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:scrollIndicators="left"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:itemIconTint="@color/selected_item"
+            app:itemTextColor="@color/selected_item"
+            app:menu="@menu/nav_menu" />
 
-            <ImageButton
-                android:id="@+id/shuffleButton"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.02"
-                android:backgroundTint="@color/white"
-                android:contentDescription="@string/shufflebutton"
-                android:scaleType="centerInside"
-                app:srcCompat="@drawable/ic_shuffle"
-                app:tint="@color/dark_blue" />
-
-            <ImageButton
-                android:id="@+id/notifButton"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.02"
-                android:backgroundTint="@color/white"
-                android:contentDescription="@string/notifbutton"
-                android:scaleType="centerInside"
-                app:srcCompat="@drawable/ic_notif"
-
-                app:tint="@color/dark_blue" />
-
-            <ImageButton
-                android:id="@+id/profileButton"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.02"
-                android:backgroundTint="@color/white"
-                android:contentDescription="@string/profilebutton"
-                android:scaleType="centerInside"
-                app:srcCompat="@drawable/ic_profile"
-                tools:ignore="ImageContrastCheck" />
-        </LinearLayout>
-
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
