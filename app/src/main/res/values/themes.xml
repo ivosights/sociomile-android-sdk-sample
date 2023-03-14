@@ -12,11 +12,18 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <item name="drawerArrowStyle">@style/DrawerArrowToggle</item>
     </style>
 
     <style name="Theme.Sociomile_android_sdk_sample.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="DrawerArrowToggle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="barLength">28dp</item>
+        <item name="gapBetweenBars">5dp</item>
+        <item name="drawableSize">24dp</item>
     </style>
 
     <style name="Theme.Sociomile_android_sdk_sample.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
