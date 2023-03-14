@@ -53,10 +53,10 @@ dependencies {
 
     implementation platform('com.google.firebase:firebase-bom:31.1.1')
     implementation 'com.google.firebase:firebase-analytics'
-    implementation 'com.google.firebase:firebase-messaging-ktx:23.1.1'
+    implementation 'com.google.firebase:firebase-messaging-ktx:23.1.2'
 
-    implementation ('com.ivo:sociomile_sdk_android:0.0.2-SANDBOX:release@aar')
-    implementation 'com.ivo.sociomile_mobile_sdk:flutter:0.0.2'
+    implementation ('com.ivo:sociomile_sdk_android:0.0.3-SANDBOX:release@aar')
+    api 'com.ivo.sociomile_mobile_sdk:flutter_release:0.0.4'
 //    implementation ('com.ivo:sociomile_sdk_android:0.0.1:release@aar')
 //    implementation 'com.ivo.sociomile_mobile_sdk:flutter:0.0.1'
 }
