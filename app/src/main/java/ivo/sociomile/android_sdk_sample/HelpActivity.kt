@@ -1,6 +1,7 @@
 package ivo.sociomile.android_sdk_sample
 
 import android.os.Bundle
+import android.util.Log
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -40,7 +41,7 @@ class HelpActivity: AppCompatActivity() {
                 .labelColorSender(0xFF000000)
                 .labelColorReceiver(0xFFFFFFFF)
                 .labelColorTheme(0xFFC0BEBE)
-                .fontFamily("Lato")
+                .fontFamily("Inter")
                 .colorConnectivity(0xFFC03232)
                 .lblColorConnectivity(0xFFFFFFFF)
                 .screenColor(0xFFF5F5F5)
@@ -58,7 +59,7 @@ class HelpActivity: AppCompatActivity() {
             sociomileEngine.build().isDarkModeActivated(true)
 
             sociomileEngine.build().firebaseToken(fcmToken)
-
+            Log.d("FCM", fcmToken)
             sociomileEngine.build().setLogger(true)
 
             sociomileEngine.build().runSociomileEngine(this)
