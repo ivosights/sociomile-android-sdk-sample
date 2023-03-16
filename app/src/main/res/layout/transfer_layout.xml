@@ -14,6 +14,7 @@
         android:layout_height="wrap_content"
         android:background="@color/white"
         android:minHeight="?attr/actionBarSize"
+        android:theme="@style/DrawerArrowToggle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -21,7 +22,7 @@
         app:subtitleTextColor="@color/blue_text_color"
         app:title="Transfer"
         app:titleCentered="true"
-        android:theme="@style/DrawerArrowToggle"
+        app:titleTextColor="@color/blue_text_color"
         tools:navigationIcon="@drawable/ic_back"
         tools:titleTextColor="@color/blue_text_color" />
 

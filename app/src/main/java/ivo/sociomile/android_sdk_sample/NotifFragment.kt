@@ -6,13 +6,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import ivo.sociomile.android_sdk_sample.databinding.FragmentSecondBinding
+import ivo.sociomile.android_sdk_sample.databinding.NotifLayoutBinding
 
 /**
  * A simple [Fragment] subclass as the second destination in the navigation.
  */
 class NotifFragment : Fragment() {
 
-    private var _binding: FragmentSecondBinding? = null
+    private var _binding: NotifLayoutBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -23,17 +24,13 @@ class NotifFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        _binding = FragmentSecondBinding.inflate(inflater, container, false)
+        _binding = NotifLayoutBinding.inflate(inflater, container, false)
         return binding.root
 
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-//        binding.buttonSecond.setOnClickListener {
-//            findNavController().navigate(R.id.action_SecondFragment_to_FirstFragment)
-//        }
     }
 
     override fun onDestroyView() {

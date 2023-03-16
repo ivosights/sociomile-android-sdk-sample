@@ -20,12 +20,13 @@
             android:layout_height="60dp"
             android:layout_alignParentBottom="true"
             android:scrollIndicators="left"
+            app:backgroundTint="@color/white"
+            app:itemIconTint="@color/selected_item"
+            app:itemTextColor="@color/selected_item"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:itemIconTint="@color/selected_item"
-            app:itemTextColor="@color/selected_item"
             app:menu="@menu/nav_menu" />
 
 </RelativeLayout>

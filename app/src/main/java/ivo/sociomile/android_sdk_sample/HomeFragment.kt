@@ -36,6 +36,10 @@ class HomeFragment : Fragment() {
             startActivity(intent)
         }
 
+        binding.button4.setOnClickListener { view ->
+            val intent = Intent(activity, TransferActivity::class.java)
+            startActivity(intent)
+        }
 
         return binding.root
 

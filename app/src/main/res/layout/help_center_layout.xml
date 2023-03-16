@@ -22,7 +22,6 @@
         app:titleTextColor="@color/blue_text_color"
         app:titleCentered="true"
         android:theme="@style/DrawerArrowToggle"
-        tools:navigationIcon="@drawable/ic_back"
         tools:titleTextColor="@color/blue_text_color" />
 
     <LinearLayout

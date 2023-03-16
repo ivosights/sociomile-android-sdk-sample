@@ -4,12 +4,10 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.ivo.sociomile_sdk_android.Sociomile
 import com.ivo.sociomile_sdk_android.SociomileActivity
 import ivo.sociomile.android_sdk_sample.MainActivity.Companion.fcmToken
 import ivo.sociomile.android_sdk_sample.databinding.ActivityMainBinding
-import kotlinx.android.synthetic.main.help_center_layout.view.*
 
 class HelpActivity: AppCompatActivity() {
 
@@ -22,7 +20,13 @@ class HelpActivity: AppCompatActivity() {
 
         setContentView(R.layout.help_center_layout)
 
+        actionBar?.setDisplayHomeAsUpEnabled(true)
         accessSociomile()
+    }
+
+    override fun onNavigateUp(): Boolean {
+        finish()
+        return true
     }
 
     fun accessSociomile(){
