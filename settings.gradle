@@ -16,11 +16,13 @@ dependencyResolutionManagement {
         }
 
         maven {
-            url "https://sociomile-sdk.s3.ap-southeast-1.amazonaws.com/sociomile-flutter-sdk/"
+//            url "https://sociomile-sdk.s3.ap-southeast-1.amazonaws.com/sociomile-flutter-sdk/"
+            url "/Users/aprikot/.m2/repository"
         }
 
         maven{
-            url "https://sociomile-sdk.s3.ap-southeast-1.amazonaws.com/sosiomile-android-sdk/"
+//            url "https://sociomile-sdk.s3.ap-southeast-1.amazonaws.com/sosiomile-android-sdk/"
+            url "/Users/aprikot/Projects/sociomile_mobile_sdk/build/host/outputs/repo"
         }
     }
 }
