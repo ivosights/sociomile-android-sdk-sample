@@ -5,7 +5,7 @@ This repo contains a sample application that will help you learn how to use the 
 Sociomile SDK sample project for Android platform using Kotlin.
 
 # Documentation
-You can find documentation for the SDK implementation guidelines on [dokumentasi](https://di.ngetest.com/docs/sdk-live-chat-sociomile/)
+You can find documentation for the SDK implementation guidelines in [here](https://di.ngetest.com/docs/sdk-live-chat-sociomile/)
 
 Getting started :
 
