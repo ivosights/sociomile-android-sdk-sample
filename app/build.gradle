@@ -64,7 +64,7 @@ android {
 
 dependencies {
 
-    implementation 'androidx.core:core-ktx:1.10.0'
+    implementation 'androidx.core:core-ktx:1.10.1'
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.9.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
@@ -79,8 +79,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-analytics'
     implementation 'com.google.firebase:firebase-messaging-ktx:23.1.2'
 
-//    implementation ('com.ivo:sociomile_sdk_android:0.0.5-SANDBOX:release@aar')
     api 'com.ivo.sociomile_mobile_sdk:flutter_release:0.0.8'
-    implementation ('com.ivo:sociomile_sdk_android:0.0.6-SANDBOX:release@aar')
-//    implementation 'com.ivo.sociomile_mobile_sdk:flutter:0.0.1'
+//    implementation ('com.ivo:sociomile_sdk_android:0.0.6-SANDBOX:release@aar')
+    implementation ('com.ivo:sociomile_sdk_android:0.0.2:release@aar')
 }
