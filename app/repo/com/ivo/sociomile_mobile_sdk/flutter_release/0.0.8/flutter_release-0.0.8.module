@@ -1,0 +1,216 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.ivo.sociomile_mobile_sdk",
+    "module": "flutter_release",
+    "version": "0.0.8",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.5"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseVariantReleaseApiPublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "io.flutter",
+          "module": "flutter_embedding_release",
+          "version": {
+            "requires": "1.0.0-d44b5a94c976fbb65815374f61ab5392a220b084"
+          }
+        },
+        {
+          "group": "io.flutter",
+          "module": "armeabi_v7a_release",
+          "version": {
+            "requires": "1.0.0-d44b5a94c976fbb65815374f61ab5392a220b084"
+          }
+        },
+        {
+          "group": "io.flutter",
+          "module": "arm64_v8a_release",
+          "version": {
+            "requires": "1.0.0-d44b5a94c976fbb65815374f61ab5392a220b084"
+          }
+        },
+        {
+          "group": "io.flutter",
+          "module": "x86_64_release",
+          "version": {
+            "requires": "1.0.0-d44b5a94c976fbb65815374f61ab5392a220b084"
+          }
+        },
+        {
+          "group": "io.flutter.plugins.flutter_plugin_android_lifecycle",
+          "module": "flutter_plugin_android_lifecycle_release",
+          "version": {
+            "requires": "0.0.8"
+          }
+        },
+        {
+          "group": "com.tekartik.sqflite",
+          "module": "sqflite_release",
+          "version": {
+            "requires": "0.0.8"
+          }
+        },
+        {
+          "group": "com.mr.flutter.plugin.filepicker",
+          "module": "file_picker_release",
+          "version": {
+            "requires": "0.0.8"
+          }
+        },
+        {
+          "group": "io.flutter.plugins.urllauncher",
+          "module": "url_launcher_android_release",
+          "version": {
+            "requires": "0.0.8"
+          }
+        },
+        {
+          "group": "io.flutter.plugins.pathprovider",
+          "module": "path_provider_android_release",
+          "version": {
+            "requires": "0.0.8"
+          }
+        },
+        {
+          "group": "com.it_nomads.fluttersecurestorage",
+          "module": "flutter_secure_storage_release",
+          "version": {
+            "requires": "0.0.8"
+          }
+        },
+        {
+          "group": "io.flutter.plugins.connectivity",
+          "module": "connectivity_plus_release",
+          "version": {
+            "requires": "0.0.8"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "flutter_release-0.0.8.aar",
+          "url": "flutter_release-0.0.8.aar",
+          "size": 11252507,
+          "sha512": "f7335e8e6d3c6aeff10616c0ff1aa3d2fbc5d8d4dba92d9a9336ca67e3233bfd14cbc9fa3984f13661848ba56771f80b47ef0739d6c1801271de4545d72779dd",
+          "sha256": "1a29fb6c9afef9c174a8fa7ceb6efd4c3bc877a29ff30421fbcc3efb83cd4ee4",
+          "sha1": "8218d089c6f3b3d6624e03578ad5bf8f9490d2d9",
+          "md5": "8abafbe91c2215409c3e8fec735a8d10"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseRuntimePublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "io.flutter",
+          "module": "flutter_embedding_release",
+          "version": {
+            "requires": "1.0.0-d44b5a94c976fbb65815374f61ab5392a220b084"
+          }
+        },
+        {
+          "group": "io.flutter",
+          "module": "armeabi_v7a_release",
+          "version": {
+            "requires": "1.0.0-d44b5a94c976fbb65815374f61ab5392a220b084"
+          }
+        },
+        {
+          "group": "io.flutter",
+          "module": "arm64_v8a_release",
+          "version": {
+            "requires": "1.0.0-d44b5a94c976fbb65815374f61ab5392a220b084"
+          }
+        },
+        {
+          "group": "io.flutter",
+          "module": "x86_64_release",
+          "version": {
+            "requires": "1.0.0-d44b5a94c976fbb65815374f61ab5392a220b084"
+          }
+        },
+        {
+          "group": "io.flutter.plugins.flutter_plugin_android_lifecycle",
+          "module": "flutter_plugin_android_lifecycle_release",
+          "version": {
+            "requires": "0.0.8"
+          }
+        },
+        {
+          "group": "com.tekartik.sqflite",
+          "module": "sqflite_release",
+          "version": {
+            "requires": "0.0.8"
+          }
+        },
+        {
+          "group": "com.mr.flutter.plugin.filepicker",
+          "module": "file_picker_release",
+          "version": {
+            "requires": "0.0.8"
+          }
+        },
+        {
+          "group": "io.flutter.plugins.urllauncher",
+          "module": "url_launcher_android_release",
+          "version": {
+            "requires": "0.0.8"
+          }
+        },
+        {
+          "group": "io.flutter.plugins.pathprovider",
+          "module": "path_provider_android_release",
+          "version": {
+            "requires": "0.0.8"
+          }
+        },
+        {
+          "group": "com.it_nomads.fluttersecurestorage",
+          "module": "flutter_secure_storage_release",
+          "version": {
+            "requires": "0.0.8"
+          }
+        },
+        {
+          "group": "io.flutter.plugins.connectivity",
+          "module": "connectivity_plus_release",
+          "version": {
+            "requires": "0.0.8"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "flutter_release-0.0.8.aar",
+          "url": "flutter_release-0.0.8.aar",
+          "size": 11252507,
+          "sha512": "f7335e8e6d3c6aeff10616c0ff1aa3d2fbc5d8d4dba92d9a9336ca67e3233bfd14cbc9fa3984f13661848ba56771f80b47ef0739d6c1801271de4545d72779dd",
+          "sha256": "1a29fb6c9afef9c174a8fa7ceb6efd4c3bc877a29ff30421fbcc3efb83cd4ee4",
+          "sha1": "8218d089c6f3b3d6624e03578ad5bf8f9490d2d9",
+          "md5": "8abafbe91c2215409c3e8fec735a8d10"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.flutter.plugins.urllauncher",
+    "module": "url_launcher_android_release",
+    "version": "0.0.8",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.5"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseVariantReleaseApiPublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "io.flutter",
+          "module": "flutter_embedding_release",
+          "version": {
+            "requires": "1.0.0-d44b5a94c976fbb65815374f61ab5392a220b084"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "url_launcher_android_release-0.0.8.aar",
+          "url": "url_launcher_android_release-0.0.8.aar",
+          "size": 15090,
+          "sha512": "bea8aed4eefb6bab1d10365bc61e6d649ad62c09ce2c1988928f3307a4b0e1b8a084ca1142d726ef3f2f3b869c3c1a1b12273d4458cea480ccd15cb7acd356c8",
+          "sha256": "495eeb52bd2877d32d49db65e88cc6a8c764c8c9c5691f3e0fe4318f2993798b",
+          "sha1": "aeeb9cddfa198a837174dd174d3e23e81be490eb",
+          "md5": "6a928202a3d289c93702762835cbda99"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseRuntimePublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "io.flutter",
+          "module": "flutter_embedding_release",
+          "version": {
+            "requires": "1.0.0-d44b5a94c976fbb65815374f61ab5392a220b084"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "url_launcher_android_release-0.0.8.aar",
+          "url": "url_launcher_android_release-0.0.8.aar",
+          "size": 15090,
+          "sha512": "bea8aed4eefb6bab1d10365bc61e6d649ad62c09ce2c1988928f3307a4b0e1b8a084ca1142d726ef3f2f3b869c3c1a1b12273d4458cea480ccd15cb7acd356c8",
+          "sha256": "495eeb52bd2877d32d49db65e88cc6a8c764c8c9c5691f3e0fe4318f2993798b",
+          "sha1": "aeeb9cddfa198a837174dd174d3e23e81be490eb",
+          "md5": "6a928202a3d289c93702762835cbda99"
+        }
+      ]
+    }
+  ]
+}
