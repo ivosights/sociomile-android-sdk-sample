@@ -16,7 +16,8 @@ dependencyResolutionManagement {
         }
 
         maven {
-            url "https://sociomile-sdk.s3.ap-southeast-1.amazonaws.com/sociomile-flutter-sdk/"
+            url "app/build/repo"
+//            url "https://sociomile-sdk.s3.ap-southeast-1.amazonaws.com/sociomile-flutter-sdk/"
         }
 
         maven{
