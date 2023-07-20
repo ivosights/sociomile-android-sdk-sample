@@ -20,7 +20,7 @@ android {
         applicationId "ivo.sociomile.android_sdk_sample"
         minSdk 23
         targetSdk 33
-        versionCode 3
+        versionCode 4
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -77,9 +77,9 @@ dependencies {
 
     implementation platform('com.google.firebase:firebase-bom:31.1.1')
     implementation 'com.google.firebase:firebase-analytics'
-    implementation 'com.google.firebase:firebase-messaging-ktx:23.1.2'
+    implementation 'com.google.firebase:firebase-messaging-ktx:23.2.0'
 
-    api 'com.ivo.sociomile_mobile_sdk:flutter_release:0.0.8'
-//    implementation ('com.ivo:sociomile_sdk_android:0.0.6-SANDBOX:release@aar')
-    implementation ('com.ivo:sociomile_sdk_android:0.0.2:release@aar')
+    api 'com.ivo.sociomile_mobile_sdk:flutter_release:0.0.9'
+    implementation ('com.ivo:sociomile_sdk_android:0.0.7-SANDBOX:release@aar')
+//    implementation ('com.ivo:sociomile_sdk_android:0.0.3:release@aar')
 }
