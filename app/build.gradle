@@ -80,6 +80,6 @@ dependencies {
     implementation 'com.google.firebase:firebase-messaging-ktx:23.2.0'
 
     api 'com.ivo.sociomile_mobile_sdk:flutter_release:0.0.9'
-    implementation ('com.ivo:sociomile_sdk_android:0.0.7-SANDBOX:release@aar')
-//    implementation ('com.ivo:sociomile_sdk_android:0.0.3:release@aar')
+//    implementation ('com.ivo:sociomile_sdk_android:0.0.7-SANDBOX:release@aar')
+    implementation ('com.ivo:sociomile_sdk_android:0.0.3:release@aar')
 }

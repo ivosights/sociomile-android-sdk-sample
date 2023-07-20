@@ -20,8 +20,8 @@ dependencyResolutionManagement {
         }
 
         maven{
-//            url "https://sociomile-sdk.s3.ap-southeast-1.amazonaws.com/sosiomile-android-sdk/"
-            url "https://sociomile-sdk.s3.ap-southeast-1.amazonaws.com/sosiomile-android-sdk/sandbox/"
+            url "https://sociomile-sdk.s3.ap-southeast-1.amazonaws.com/sosiomile-android-sdk/"
+//            url "https://sociomile-sdk.s3.ap-southeast-1.amazonaws.com/sosiomile-android-sdk/sandbox/"
 //            url "/Users/aprikot/.m2/repository"
         }
     }

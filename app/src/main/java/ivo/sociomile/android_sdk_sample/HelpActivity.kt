@@ -58,8 +58,8 @@ class HelpActivity: AppCompatActivity() {
 
             sociomileEngine
                 .build()
-                .initialize("BBB", "AAA", "6281288682850", "Zafran")
-//                .initialize("D50cwXw0xovW1Tzk2OCyzIW9316l8BFt", "F28C1", "API-SDK Sandbox", "api-sdk-sandbox")
+//                .initialize("BBB", "AAA", "6281288682850", "Zafran")
+                .initialize("D50cwXw0xovW1Tzk2OCyzIW9316l8BFt", "F28C1", "API-SDK Sandbox", "api-sdk-sandbox")
 
             sociomileEngine.build().isDarkModeActivated(true)
 
